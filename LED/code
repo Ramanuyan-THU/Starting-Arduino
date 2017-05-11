@@ -1,0 +1,25 @@
+int LED = 13; 
+
+void setup() {                
+  pinMode(LED, OUTPUT);     
+}
+
+//达到一秒闪一下的效果
+void loop() {
+  digitalWrite(LED, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);               // wait for a second
+  digitalWrite(LED, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);               // wait for a second
+}
+
+//led先是0.2秒闪一下，然后再2秒闪一下
+void loop() {
+  digitalWrite(LED, HIGH);  
+  delay(200); 
+  digitalWrite(LED, LOW);
+  delay(200);
+  digitalWrite(LED,HIGH);
+  delay(2000);
+  digitalWrite(LED, LOW);    
+  delay(2000);             
+}
